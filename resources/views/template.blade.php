@@ -7,6 +7,16 @@
     <title>My Portofolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+        body {
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-variation-settings:
+                "wdth" 100,
+                "YTLC" 500;
+        }
+    </style>
     @stack('css')
 </head>
 <body>
