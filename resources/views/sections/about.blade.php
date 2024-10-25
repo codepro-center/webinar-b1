@@ -6,7 +6,7 @@
 
                 <x-modal id="edit-about-modal" title="Edit Section About" form_action="{{ route('contents.update.about') }}" form_method="put" form_data="true">
                     <div class="form-group mb-3">
-                        <label for="about_title" class="form-label fw-semibold">Profesi</label>
+                        <label for="about_title" class="form-label fw-semibold">Judul section about</label>
                         <input type="text" class="form-control @error('about_title') is-invalid @enderror" id="about_title" name="about_title" placeholder="Masukkan profesi anda" value="{{ old('about_title') ?? $contents['about_title'] }}" required>
                         @error('about_title')
                             <span class="invalid-feedback" role="alert">
@@ -15,11 +15,11 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="self_description" class="form-label">Teks Hero</label>
+                        <label for="self_description" class="form-label">Deskripsi diri</label>
                         <textarea class="form-control" id="self_description" name="self_description" rows="3" required>{{ old('self_description') ?? $contents['self_description'] }}</textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="about_image" class="form-label">Gambar Section About</label>
+                        <label for="about_image" class="form-label">Gambar section about</label>
                         <input class="form-control @error('about_image') is-invalid @enderror" type="file" id="about_image" name="about_image">
                         @error('about_image')
                             <span class="invalid-feedback" role="alert">
