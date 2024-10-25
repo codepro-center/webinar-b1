@@ -72,12 +72,12 @@
                                         </button>
                                     </a>
                                     @auth
-                                        <div class="dropdown">
+                                        <div class="dropdown dropstart">
                                             <a class="" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bi bi-three-dots-vertical fs-3"></i>
                                             </a>
 
-                                            <ul class="dropdown-menu" data-popper-placement="top-end">
+                                            <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item edit-project-btn" href="javascript:void(0);" data-name="{{ $project->name }}" data-link="{{ $project->link }}" data-description="{{ $project->description }}" data-id="{{ $project->id }}">
                                                         <i class="bi bi-pencil text-warning me-2"></i>Edit
