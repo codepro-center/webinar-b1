@@ -59,6 +59,7 @@ $(document).ready(function () {
         items: 3, // default for large screens
         autoplay: true,
         autoplayTimeout: 6000, // 6 seconds
+        autoplayHoverPause: true,
         dots: false,
         nav: false,
         loop: true,
