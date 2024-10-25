@@ -60,7 +60,7 @@
             <div class="col">
                 <div class="owl-carousel py-3">
                     @foreach ($projects as $project)
-                        <div class="card shadow rounded-4 mx-2">
+                        <div class="card shadow rounded-4 mx-2 h-100">
                             <img src="{{ asset("storage/{$project->image}") }}" class="card-img-top" alt="Projek item">
                             <div class="card-body">
                                 <h5 class="text-center fw-bold my-3">{{ $project->name }}</h5>
