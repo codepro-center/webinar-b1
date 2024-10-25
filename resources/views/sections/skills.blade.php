@@ -89,6 +89,14 @@
                     </div>
                 </div>
             @endforeach
+            @empty($skills->count())
+                <div class="col-12 bg-light rounded-3 p-5">
+                    <div class="text-center">
+                        <i class="bi bi-code-slash fs-1"></i>
+                        <h6>Belum ada skill ditambahkan</h6>
+                    </div>
+                </div>
+            @endempty
         </div>
     </div>
 </section>

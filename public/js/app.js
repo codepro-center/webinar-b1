@@ -1,6 +1,10 @@
 $(document).ready(function () {
-    $(".edit-control").click(function () {
-        $(".btns-toggle").toggleClass("d-none");
+    $("#skills .edit-control").click(function () {
+        $("#skills .btns-toggle").toggleClass("d-none");
+    });
+    
+    $("#projects .edit-control").click(function () {
+        $("#projects .btns-toggle").toggleClass("d-none");
     });
 
     $(".delete-btn").click(function () {
