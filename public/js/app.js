@@ -61,6 +61,7 @@ $(document).ready(function () {
         autoplayTimeout: 6000, // 6 seconds
         dots: false,
         nav: false,
+        loop: true,
         responsive: {
             0: {
                 items: 1 // Small screens
