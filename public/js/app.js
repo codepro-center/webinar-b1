@@ -54,4 +54,24 @@ $(document).ready(function () {
 
         $("#edit-project-modal").modal("show");
     });
+
+    $('.owl-carousel').owlCarousel({
+        items: 3, // default for large screens
+        autoplay: true,
+        autoplayTimeout: 6000, // 6 seconds
+        dots: false,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1 // Small screens
+            },
+            768: {
+                items: 2 // Medium screens
+            },
+            1024: {
+                items: 3 // Large screens
+            }
+        }
+    });
+    
 });

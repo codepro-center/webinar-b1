@@ -56,53 +56,55 @@
                 </x-modal>
             @endauth
         </div>
-        <div class="row py-3">
-            @foreach ($projects as $project)
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card shadow rounded-4">
-                        <img src="{{ asset("storage/{$project->image}") }}" class="card-img-top" alt="Projek item">
-                        <div class="card-body">
-                            <h5 class="text-center fw-bold my-3">{{ $project->name }}</h5>
-                            <p class="text-muted text-center">{{ $project->description }}</p>
-                            <div class="d-flex align-items-center">
-                                <a href="{{ $project->link }}" class="flex-grow-1" target="_blank">
-                                    <button class="btn btn-outline-dark w-100">
-                                        Lihat Projek
-                                    </button>
-                                </a>
-                                @auth
-                                    <div class="dropdown">
-                                        <a class="" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical fs-3"></i>
-                                        </a>
+        <div class="row">
+            <div class="col">
+                <div class="owl-carousel py-3">
+                    @foreach ($projects as $project)
+                        <div class="card shadow rounded-4 mx-2">
+                            <img src="{{ asset("storage/{$project->image}") }}" class="card-img-top" alt="Projek item">
+                            <div class="card-body">
+                                <h5 class="text-center fw-bold my-3">{{ $project->name }}</h5>
+                                <p class="text-muted text-center">{{ $project->description }}</p>
+                                <div class="d-flex align-items-center">
+                                    <a href="{{ $project->link }}" class="flex-grow-1" target="_blank">
+                                        <button class="btn btn-outline-dark w-100">
+                                            Lihat Projek
+                                        </button>
+                                    </a>
+                                    @auth
+                                        <div class="dropdown">
+                                            <a class="" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical fs-3"></i>
+                                            </a>
 
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item edit-project-btn" href="javascript:void(0);" data-name="{{ $project->name }}" data-link="{{ $project->link }}" data-description="{{ $project->description }}" data-id="{{ $project->id }}">
-                                                    <i class="bi bi-pencil text-warning me-2"></i>Edit
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item delete-btn" href="javascript:void(0);" data-url="{{ route('projects.delete', $project->id) }}" data-csrf="{{ csrf_token() }}">
-                                                    <i class="bi bi-trash text-danger me-2"></i>Hapus
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                @endauth
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item edit-project-btn" href="javascript:void(0);" data-name="{{ $project->name }}" data-link="{{ $project->link }}" data-description="{{ $project->description }}" data-id="{{ $project->id }}">
+                                                        <i class="bi bi-pencil text-warning me-2"></i>Edit
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item delete-btn" href="javascript:void(0);" data-url="{{ route('projects.delete', $project->id) }}" data-csrf="{{ csrf_token() }}">
+                                                        <i class="bi bi-trash text-danger me-2"></i>Hapus
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    @endauth
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+                    @empty($projects->count())
+                        <div class="w-100 bg-light rounded-3 p-5">
+                            <div class="text-center">
+                                <i class="bi bi-cloud-slash fs-1"></i>
+                                <h6>Belum ada projek ditambahkan</h6>
+                            </div>
+                        </div>
+                    @endempty
                 </div>
-            @endforeach
-            @empty($projects->count())
-                <div class="col-12 bg-light rounded-3 p-5">
-                    <div class="text-center">
-                        <i class="bi bi-cloud-slash fs-1"></i>
-                        <h6>Belum ada projek ditambahkan</h6>
-                    </div>
-                </div>
-            @endempty
+            </div>
         </div>
     </div>
 </section>
