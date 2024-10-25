@@ -77,7 +77,7 @@
                                                 <i class="bi bi-three-dots-vertical fs-3"></i>
                                             </a>
 
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" data-popper-placement="top-end">
                                                 <li>
                                                     <a class="dropdown-item edit-project-btn" href="javascript:void(0);" data-name="{{ $project->name }}" data-link="{{ $project->link }}" data-description="{{ $project->description }}" data-id="{{ $project->id }}">
                                                         <i class="bi bi-pencil text-warning me-2"></i>Edit
