@@ -95,7 +95,7 @@
                     </div>
                 </div>
             @endforeach
-            @empty($skills->count())
+            @empty($projects->count())
                 <div class="col-12 bg-light rounded-3 p-5">
                     <div class="text-center">
                         <i class="bi bi-cloud-slash fs-1"></i>
