@@ -41,7 +41,7 @@
                         <a class="nav-link fw-medium" href="#projects">Projek</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link fw-medium" href="#contact">Kontak</a>
+                        <a class="nav-link fw-medium" href="#contacts">Kontak</a>
                     </li>
                 </ul>
             </div>
