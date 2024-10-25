@@ -65,7 +65,7 @@
                             <h5 class="text-center fw-bold my-3">{{ $project->name }}</h5>
                             <p class="text-muted text-center">{{ $project->description }}</p>
                             <div class="d-flex align-items-center">
-                                <a href="{{ $project->link }}" class="flex-grow-1">
+                                <a href="{{ $project->link }}" class="flex-grow-1" target="_blank">
                                     <button class="btn btn-outline-dark w-100">
                                         Lihat Projek
                                     </button>

@@ -54,7 +54,7 @@
                         Tentang Saya
                     </button>
                 </a>
-                <a href="{{ $contents['wa_link'] }}" class="mx-2">
+                <a href="{{ $contents['wa_link'] }}" class="mx-2" target="_blank">
                     <button class="btn btn-primary rounded-5">
                         <i class="bi bi-whatsapp me-2"></i>
                         Hubungi Saya
